@@ -77,8 +77,11 @@ para = [alpha, beta, gamma];
 
 
 [positiveId, crossval_id] = train_test_split(X{1}, nfolds, scenario);
+disp(size(X{1}))
 AUPR = zeros(nfolds,1);
 AUC = zeros(nfolds, 1);
+disp(size(positiveId))
+disp(size(crossval_id))
 
 for fold = 1:nfolds
     X{1} = yy;
@@ -101,6 +104,7 @@ for fold = 1:nfolds
     time =toc;
     
     predX = U{1} * V{1}';
+    
     testScore = [yy(PtestID); yy(NtestID)];
     pred = [predX(PtestID); predX(NtestID)];
     [auc1, aupr, rocx, rocy, prx, pry] = auc(testScore(:), pred(:), 1e-6);
