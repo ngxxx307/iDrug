@@ -1,7 +1,7 @@
-import numpy as np
+# import numpy as np
 
 with open("./rawdata/DiseaseName", "r") as f:
-    DiseaseName = np.array(f.readlines())
+    DiseaseName = f.readlines()
     f.close()
 DiseaseName = [x.strip() for x in DiseaseName]
 DiseaseName = DiseaseName[1:]
