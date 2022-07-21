@@ -1,0 +1,11 @@
+load DrugDisease
+
+[a, b] = train_test_split(DrugDisease, 5, '1')
+
+disp(numel(find(DrugDisease)))
+disp(numel(DrugDisease))
+
+negativeID = find(X{1}==0);
+    num = numel(negativeID);
+    Nidx = randperm(num);
+    NtestID = negativeID(Nidx(1:length(PtestID))
