@@ -38,7 +38,7 @@ function main(rank1, rank2, w, alpha, beta, gamma, DorT, scenario, k)
     end
 
 load DiseaseSimMat;
-load DrugDisease;
+DrugDisease = load("C:\Users\kurtng\Documents\project\disease-drug-target-ai\iDrug\rawdata\processeddata\DrugDisease.mat");
 load DrugSimMat1;
 load DrugSimMat2;
 load DrugTarget;
